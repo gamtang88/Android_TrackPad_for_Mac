@@ -69,7 +69,7 @@ OnGesturePerformedListener, OnDrawerOpenListener, OnDrawerCloseListener, SensorE
 	final static int ULMIN_TOUCHMOVE_VALUE = 50;
 	final static int DRMIN_TOUCHMOVE_VALUE = -50;
 
-
+/////
 	final static int NONE = 20;
 	final static int READY_SINGLE = 21;
 	final static int READY_MULTI = 22;

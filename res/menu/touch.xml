@@ -1,0 +1,72 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:title="SENSOR MODE">
+        <menu>
+            <group
+                android:id="@+id/sensor_switch"
+                android:checkableBehavior="single" >
+                <item
+                    android:id="@+id/on"
+                    android:checked="false"
+                    android:title="ON"/>
+                <item
+                    android:id="@+id/off"
+                    android:checked="true"
+                    android:title="OFF"/>
+            </group>
+        </menu>
+    </item>
+    <item android:title="CURSOR SPEED">
+        <menu>
+            <group
+                android:id="@+id/cursor_speed"
+                android:checkableBehavior="single" >
+                <item
+                    android:id="@+id/speedDefault"
+                    android:checked="true"
+                    android:title="default"/>
+                <item
+                    android:id="@+id/speed1"
+                    android:checked="false"
+                    android:title="+10%"/>
+                <item
+                    android:id="@+id/speed2"
+                    android:checked="false"
+                    android:title="+20%"/>
+                <item
+                    android:id="@+id/speed3"
+                    android:checked="false"
+                    android:title="+30%"/>
+                <item
+                    android:id="@+id/speed4"
+                    android:checked="false"
+                    android:title="+40%"/>
+                <item
+                    android:id="@+id/speed5"
+                    android:checked="false"
+                    android:title="+50%"/>
+                <item
+                    android:id="@+id/speed6"
+                    android:checked="false"
+                    android:title="+60%"/>
+                <item
+                    android:id="@+id/speed7"
+                    android:checked="false"
+                    android:title="+70%"/>
+                <item
+                    android:id="@+id/speed8"
+                    android:checked="false"
+                    android:title="+80%"/>
+                <item
+                    android:id="@+id/speed9"
+                    android:checked="false"
+                    android:title="+90%"/>
+                <item
+                    android:id="@+id/speed10"
+                    android:checked="false"
+                    android:title="+100%"/>
+            </group>
+        </menu>
+    </item>
+
+</menu>

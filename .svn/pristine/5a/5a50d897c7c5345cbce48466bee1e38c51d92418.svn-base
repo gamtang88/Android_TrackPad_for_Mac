@@ -1,0 +1,72 @@
+package com.example.mackinpad;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.view.animation.AnimationUtils;
+import android.widget.ViewFlipper;
+
+public class HelpActivity extends Activity {
+	private ViewFlipper m_viewFlipper;
+
+	private int m_nPreTouchPosX = 0;
+
+	/** Called when the activity is first created. */
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+				WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		if (StartActivity.isTablet(this))
+			setContentView(R.layout.activity_help_tab);
+		else
+			setContentView(R.layout.activity_help);
+		
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+		m_viewFlipper = (ViewFlipper) findViewById(R.id.viewFlipper);
+		m_viewFlipper.setOnTouchListener(MyTouchListener);
+	}
+
+	private void MoveNextView() {
+		m_viewFlipper.setInAnimation(AnimationUtils.loadAnimation(this,
+				R.anim.appear_from_right));
+		m_viewFlipper.setOutAnimation(AnimationUtils.loadAnimation(this,
+				R.anim.disappear_to_left));
+		m_viewFlipper.showNext();
+	}
+
+	private void MovewPreviousView() {
+		m_viewFlipper.setInAnimation(AnimationUtils.loadAnimation(this,
+				R.anim.appear_from_left));
+		m_viewFlipper.setOutAnimation(AnimationUtils.loadAnimation(this,
+				R.anim.disappear_to_right));
+		m_viewFlipper.showPrevious();
+	}
+
+	View.OnTouchListener MyTouchListener = new View.OnTouchListener() {
+		public boolean onTouch(View v, MotionEvent event) {
+			if (event.getAction() == MotionEvent.ACTION_DOWN) {
+				m_nPreTouchPosX = (int) event.getX();
+			}
+
+			if (event.getAction() == MotionEvent.ACTION_UP) {
+				int nTouchPosX = (int) event.getX();
+
+				if (nTouchPosX < m_nPreTouchPosX) {
+					MoveNextView();
+				} else if (nTouchPosX > m_nPreTouchPosX) {
+					MovewPreviousView();
+				}
+
+				m_nPreTouchPosX = nTouchPosX;
+			}
+
+			return true;
+		}
+	};
+}

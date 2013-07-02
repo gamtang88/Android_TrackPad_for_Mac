@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_normal"
+    android:orientation="vertical"
+    tools:context=".TouchActivity" >
+
+    <TextView
+        android:id="@+id/modetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="23dp"
+        android:textIsSelectable="false" />
+
+    <SlidingDrawer
+        android:id="@+id/drawer1"
+        android:layout_width="280dp"
+        android:layout_height="340dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:content="@+id/num_pad"
+        android:handle="@+id/handle"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@id/handle"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/handle_of_numpad"
+            android:src="@drawable/son" />
+
+        <GridLayout
+            android:id="@id/num_pad"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/button_bg2"
+            android:columnCount="4"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:rowCount="5" >
+
+            <ImageButton
+                android:id="@+id/key_clear"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/clear"
+                android:contentDescription="@string/key_clear" />
+
+            <ImageButton
+                android:id="@+id/key_equal"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/equal"
+                android:contentDescription="@string/key_equal" />
+
+            <ImageButton
+                android:id="@+id/key_slash"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/slash"
+                android:contentDescription="@string/key_slash" />
+
+            <ImageButton
+                android:id="@+id/key_star"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/star"
+                android:contentDescription="@string/key_star" />
+
+            <ImageButton
+                android:id="@+id/key_7"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/k7"
+                android:contentDescription="@string/key_7" />
+
+            <ImageButton
+                android:id="@+id/key_8"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/k8"
+                android:contentDescription="@string/key_8" />
+
+            <ImageButton
+                android:id="@+id/key_9"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/k9"
+                android:contentDescription="@string/key_9" />
+
+            <ImageButton
+                android:id="@+id/key_minus"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/sub"
+                android:contentDescription="@string/key_minus" />
+
+            <ImageButton
+                android:id="@+id/key_4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/k4"
+                android:contentDescription="@string/key_4" />
+
+            <ImageButton
+                android:id="@+id/key_5"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/k5"
+                android:contentDescription="@string/key_5" />
+
+            <ImageButton
+                android:id="@+id/key_6"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/k6"
+                android:contentDescription="@string/key_6" />
+
+            <ImageButton
+                android:id="@+id/key_plus"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/plus"
+                android:contentDescription="@string/key_plus" />
+
+            <ImageButton
+                android:id="@+id/key_1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/k1"
+                android:contentDescription="@string/key_1" />
+
+            <ImageButton
+                android:id="@+id/key_2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/k2"
+                android:contentDescription="@string/key_2" />
+
+            <ImageButton
+                android:id="@+id/key_3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/k3"
+                android:contentDescription="@string/key_3" />
+
+            <ImageButton
+                android:id="@+id/key_enter"
+                android:layout_width="60dp"
+                android:layout_height="120dp"
+                android:layout_rowSpan="2"
+                android:background="@drawable/enter"
+                android:contentDescription="@string/key_enter" />
+
+            <ImageButton
+                android:id="@+id/key_0"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_columnSpan="2"
+                android:background="@drawable/zero"
+                android:contentDescription="@string/key_0" />
+
+            <ImageButton
+                android:id="@+id/key_dot"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/dot"
+                android:contentDescription="@string/key_dot" />
+        </GridLayout>
+    </SlidingDrawer>
+
+    <ImageButton
+        android:id="@+id/change_to_gesture_btn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/kto_gesture"
+        android:contentDescription="@string/to_gesture" />
+
+</RelativeLayout>

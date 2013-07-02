@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gesture"
+    tools:context=".GesturedetectActivity" >
+
+    <ImageButton
+        android:id="@+id/change_to_touch_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/kto_touch"
+        android:contentDescription="@string/to_gesture" />
+
+    <SlidingDrawer
+        android:id="@+id/drawer1"
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:content="@+id/content"
+        android:handle="@+id/handle"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@id/handle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/handle_of_numpad"
+            android:src="@drawable/handle_gesture" />
+
+        <ImageView
+            android:id="@id/content"
+            android:layout_width="450dp"
+            android:layout_height="500dp"
+            android:contentDescription="@string/handle_of_numpad"
+            android:src="@drawable/drawer" />
+    </SlidingDrawer>
+
+</RelativeLayout>

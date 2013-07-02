@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:enabled="false"
+        android:title="SENSOR MODE">
+    </item>
+
+    <group
+        android:id="@+id/sensor_switch"
+        android:checkableBehavior="single" >
+        <item
+            android:id="@+id/on"
+            android:checked="false"
+            android:title="ON"/>
+        <item
+            android:id="@+id/off"
+            android:checked="true"
+            android:title="OFF"/>
+    </group>
+
+</menu>

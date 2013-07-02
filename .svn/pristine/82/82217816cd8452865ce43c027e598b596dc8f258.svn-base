@@ -1,0 +1,55 @@
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewFlipper"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/appinfoview"
+        android:layout_width="600dp"
+        android:layout_height="600dp"
+        android:layout_gravity="center"
+        android:background="@drawable/appinfo"
+        android:contentDescription="@string/appinfocom"
+        android:scaleType="fitCenter" >
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/touchinfoview"
+        android:layout_width="600dp"
+        android:layout_height="600dp"
+        android:layout_gravity="center"
+        android:background="@drawable/touchinfo"
+        android:contentDescription="@string/touchinfocom"
+        android:scaleType="fitCenter" >
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/gestureinfoview"
+        android:layout_width="600dp"
+        android:layout_height="600dp"
+        android:layout_gravity="center"
+        android:background="@drawable/gestureinfo"
+        android:contentDescription="@string/gestureinfocom"
+        android:scaleType="fitCenter" >
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/gesview1"
+        android:layout_width="600dp"
+        android:layout_height="600dp"
+        android:layout_gravity="center"
+        android:background="@drawable/ges1"
+        android:contentDescription="@string/gesture1"
+        android:scaleType="fitCenter" >
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/gesview2"
+        android:layout_width="600dp"
+        android:layout_height="600dp"
+        android:layout_gravity="center"
+        android:background="@drawable/ges2"
+        android:contentDescription="@string/gesture2"
+        android:scaleType="fitCenter" />
+
+</ViewFlipper>
